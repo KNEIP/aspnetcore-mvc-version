@@ -1,6 +1,5 @@
 version: 0.1.{build}
 image: Visual Studio 2017
 install:
-- ps: >-
-    ./tools/dotnet-install.ps1 -Version 2.0.0
-    dotnet restore
+- ps: ./tools/dotnet-install.ps1 -Version 2.0.0
+- ps: dotnet restore
