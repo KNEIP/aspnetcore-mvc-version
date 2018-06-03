@@ -1,0 +1,5 @@
+version: 0.1.{build}
+install:
+- ps: >-
+    ./build/install-dotnet.ps1
+    dotnet --version
