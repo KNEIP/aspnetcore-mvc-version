@@ -11,7 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>
     /// Extensions methods to configure api versioning and swagger.
     /// </summary>
-    public static class IVersioningServiceCollectionExtensions
+    public static class VersioningServiceCollectionExtensions
     {
         /// <summary>
         /// Initializes rest api versioning and the associated swagger configuration.

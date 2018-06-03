@@ -11,4 +11,8 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Kneip.AspNetCore.Mvc.Versioning\Kneip.AspNetCore.Mvc.Versioning.csproj" />
+  </ItemGroup>
+
 </Project>
