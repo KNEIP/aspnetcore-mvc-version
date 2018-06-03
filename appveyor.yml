@@ -3,4 +3,4 @@ image: Visual Studio 2017
 install:
 - ps: >-
     ./tools/dotnet-install.ps1 -Version 2.0.0
-    dotnet --version
+    dotnet restore
