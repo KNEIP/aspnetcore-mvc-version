@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B334B3DB-E71C-48AD-BC9D-93515E4D1D56}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		LICENSE = LICENSE
+		README.md = README.md
+		Standard.ruleset = Standard.ruleset
+		stylecop.json = stylecop.json
+		Test.ruleset = Test.ruleset
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kneip.AspNetCore.Mvc.Versioning", "src\Kneip.AspNetCore.Mvc.Versioning\Kneip.AspNetCore.Mvc.Versioning.csproj", "{B7A65089-0EE5-47CB-9792-2C00741FC31C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A65089-0EE5-47CB-9792-2C00741FC31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A65089-0EE5-47CB-9792-2C00741FC31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A65089-0EE5-47CB-9792-2C00741FC31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A65089-0EE5-47CB-9792-2C00741FC31C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E344BE79-1F19-4252-A20E-C73A2FCD32E1}
+	EndGlobalSection
+EndGlobal
