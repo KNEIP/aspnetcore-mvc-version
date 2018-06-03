@@ -1,13 +1,9 @@
 <Project>
 
   <!-- Shared information for all assemblies -->
-  <PropertyGroup>
-    <Product>Asp.Net Core extensions</Product>
-    <Authors>Kneip Communication S.A.</Authors>
-    <Company>Kneip Communication S.A.</Company>
-    <Version>0.1.0</Version>
-    <AssemblyVersion>$(Version).0</AssemblyVersion>
-    <Copyright>Copyright (c) ${Company}. All rights reserved.</Copyright>
+  <Import Project="Project.props" />
+  <PropertyGroup Condition=" '$(Company)' != '' ">
+    <Copyright>Copyright (c) $(Company). All rights reserved.</Copyright>
   </PropertyGroup>
 
   <!-- Ensure signature of all assemblies -->
@@ -20,7 +16,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" />
   </ItemGroup>
-  
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>../../Standard.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
   <!-- Activate stylecop -->
   <ItemGroup>
     <AdditionalFiles Include="../../stylecop.json" Link="stylecop.json" />
@@ -30,8 +29,6 @@
   <!-- Activates specific rules for test projects -->
   <PropertyGroup Condition=" $(MSBuildProjectName.EndsWith('.Tests')) ">
     <CodeAnalysisRuleSet>../../Test.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" ! $(MSBuildProjectName.EndsWith('.Tests')) ">
-    <CodeAnalysisRuleSet>../../Standard.ruleset</CodeAnalysisRuleSet>
+    <RootNamespace>$(MSBuildProjectName.Replace('.Tests', ''))</RootNamespace>
   </PropertyGroup>
 </Project>

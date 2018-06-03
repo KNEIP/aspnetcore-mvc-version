@@ -1,5 +1,11 @@
-version: 0.1.{build}
+version: 0.1.0.{build}
 image: Visual Studio 2017
+dotnet_csproj:
+  patch: true
+  file: 'Project.props'
+  version: '{version}'
+  assembly_version: '{version}'
+configuration: Release
 install:
 - ps: ./tools/dotnet-install.ps1 -Version 2.0.0
 - ps: dotnet restore
